@@ -1,9 +1,15 @@
 ##Armorblox
+Armorblox is an Integrated Cloud Email Security (ICES) platform that stops BEC and targeted phishing attacks, protects sensitive data, and saves time for security teams.
 
-Armorblox secures enterprise communications over email and other cloud office applications with the power of Natural Language Understanding. The Armorblox platform connects over APIs and analyzes thousands of signals to understand the context of communications and protect people and data from compromise. Over 56,000 organizations use Armorblox to stop BEC and targeted phishing attacks, protect sensitive PII and PCI, and automate remediation of user-reported email threats. Armorblox was featured in the 2019 Forbes AI 50 list and was named a 2020 Gartner Cool Vendor in Cloud Office Security. Founded in 2017, Armorblox is headquartered in Sunnyvale, CA and backed by General Catalyst and Next47.
+The Armorblox content pack contains an Armorblox integration that provides customers with a granular level of visibility into targeted email threats and the ability to orchestrate response processes using Cortex XSOAR.
+
+The Armorblox playbook enables gathering email threats that need review and alerting security admins for further investigation. 
+
 
 ###What does this pack do?
 
-The integration pack allows: Retrieving email threat data as incidents using Cortex XSOAR. 
+- Ingest threat data from Armorblox into Cortex XSOAR.
+- Use the out-of-the-box playbook to send email alerts to admins for Armorblox incidents that need review.
 
-For more information on Armorblox, please visit www.abnormalsecurity.com
+For more information, visit https://www.armorblox.com/  
+
