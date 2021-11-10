@@ -2,10 +2,12 @@ import demistomock as demisto  # noqa: F401
 from CommonServerPython import *  # noqa: F401
 # noqa: F401
 # noqa: F401
+# noqa: F401
+# noqa: F401
 import dateparser
 import requests
 import json
-
+import collections
 
 # disable insecure warnings
 requests.packages.urllib3.disable_warnings()
@@ -59,6 +61,10 @@ class Client(BaseClient):
             url_suffix='/incidents/{}'.format(incident_id),
             params=request_params
         )
+
+
+def makehash():
+    return collections.defaultdict(makehash)
 
 
 def test_module(client: Client) -> str:
@@ -125,6 +131,39 @@ def get_incident_message_ids(client, incident_id):
     return message_ids
 
 
+def get_remediation_action(client, incident_id):
+    """
+    Returns the remediation action(s) for the input incident.
+    """
+
+    detail_response = client.get_incident_details(incident_id)
+    remediation_actions = None
+    if 'remediation_actions' in detail_response.keys():
+        remediation_actions = detail_response['remediation_actions'][0]
+        if ('NEEDS REVIEW' in detail_response['remediation_actions']) or ('ALERT' in detail_response['remediation_actions']):
+            remediation_actions = 'NEEDS REVIEW'
+        else:
+            remediation_actions = None
+    else:
+        remediation_actions = None
+
+    contxt = makehash()
+    human_readable = makehash()
+    human_readable['incident_id'] = incident_id
+    human_readable['remediation_actions'] = remediation_actions
+    contxt['incident_id'] = incident_id
+    contxt['remediation_actions'] = remediation_actions
+    ec = {'Armorblox.Threat(val.incident_id && val.incident_id == obj.incident_id)': contxt}
+    demisto.results({
+        'Type': entryTypes['note'],
+        'ContentsFormat': formats['markdown'],
+        'Contents': detail_response,
+        'HumanReadable': tableToMarkdown('Remediation Action is: ', human_readable),
+        'EntryContext': ec,
+
+    })
+
+
 def fetch_incidents_command(client):
     last_run = demisto.getLastRun()
     start_time: Any
@@ -189,6 +228,9 @@ def main():
             fetch_incidents_command(client)
             return_results("Incidents fetched successfully!!")
             # return_results(fetch_incidents_command(client))
+        if demisto.command() == "armorblox-check-remediation-action":
+            incident_id = demisto.args().get('incident_id')
+            get_remediation_action(client, incident_id)
 
         elif demisto.command() == 'test-module':
             result = test_module(client)
