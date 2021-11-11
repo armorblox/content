@@ -72,8 +72,7 @@ script:
     name: armorblox-check-remediation-action
     outputs:
     - contextPath: Armorblox.Threat.remediation_actions
-      description: Should be a dictionary with incident_id and remediation_action
-        fields.
+      description: Should be the remediation action name for the incident under inspection
       type: string
   dockerimage: demisto/python3:3.9.7.24076
   isfetch: true

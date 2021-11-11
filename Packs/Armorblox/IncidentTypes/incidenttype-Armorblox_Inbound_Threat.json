@@ -1,5 +1,5 @@
 {
-    "autorun": false,
+    "autorun": true,
     "color": "#D4E8F1",
     "days": 0,
     "daysR": 0,
@@ -16,6 +16,7 @@
     "locked": false,
     "name": "Armorblox Inbound Threat",
     "onChangeRepAlg": 0,
+    "playbookId": "Armorblox Needs Review",
     "readonly": false,
     "reputationCalc": 0,
     "system": false,

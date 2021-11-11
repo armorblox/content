@@ -11,5 +11,4 @@ The Armorblox playbook enables gathering email threats that need review and aler
 - Ingest threat data from Armorblox into Cortex XSOAR.
 - Use the out-of-the-box playbook to send email alerts to admins for Armorblox incidents that need review.
 
-For more information, visit https://www.armorblox.com/  
-
+For more information, visit https://www.armorblox.com/ 

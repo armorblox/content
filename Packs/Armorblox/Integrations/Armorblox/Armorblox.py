@@ -140,10 +140,10 @@ def get_remediation_action(client, incident_id):
     remediation_actions = None
     if 'remediation_actions' in detail_response.keys():
         remediation_actions = detail_response['remediation_actions'][0]
-        if ('NEEDS REVIEW' in detail_response['remediation_actions']) or ('ALERT' in detail_response['remediation_actions']):
-            remediation_actions = 'NEEDS REVIEW'
-        else:
-            remediation_actions = None
+        # if ('NEEDS REVIEW' in detail_response['remediation_actions']) or ('ALERT' in detail_response['remediation_actions']):
+        #     remediation_actions = 'NEEDS REVIEW'
+        # else:
+        #     remediation_actions = None
     else:
         remediation_actions = None
 
