@@ -17,7 +17,7 @@ Armorblox Send Email
 | recipient_mail_address | The email id where the incident details have to be sent |
 | incident_id | Action to be taken against this incident id |
 | remediation_action | Field to check if the remediation action is Needs Review/Alert |
-| sender_mail_address | The senders mail address |
+| sender_mail_address | The sender's mail address |
 | sender_mail_password | Senders mail password |
 | smtp_server | MailServer |
 | smtp_port | MailServer port |
