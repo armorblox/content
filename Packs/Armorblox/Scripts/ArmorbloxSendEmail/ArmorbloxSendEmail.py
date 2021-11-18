@@ -2,7 +2,7 @@ import demistomock as demisto  # noqa: F401
 from CommonServerPython import *  # noqa: F401
 # import demistomock as demisto  # noqa: F401
 # from CommonServerPython import *  # noqa: F401
-"""This is a n automation script for sending an email whenever a particular incident is encountered.
+"""This is an automation script for sending an email whenever a particular incident is encountered.
 This incident is identified by it's remediation action. If the remediation action is ALERT or NEEDS REVIEW,an email
 is automatically sent to the desired admin email/group.
 """
