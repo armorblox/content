@@ -11,7 +11,7 @@ args:
 - description: The sender's mail address
   name: sender_mail_address
   required: true
-- description: Senders mail password
+- description: Sender's mail password
   name: sender_mail_password
   required: true
   secret: true
