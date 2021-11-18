@@ -3,8 +3,7 @@ commonfields:
   id: Armorblox
   version: -1
 configuration:
-- defaultvalue: outbount-integration-tenant
-  display: Armorblox tenant name
+- display: Armorblox tenant name
   name: tenantName
   required: true
   type: 0
@@ -68,13 +67,13 @@ script:
     - description: The incident id of the incident under inspection
       name: incident_id
       required: true
-    description: 'Check the recommended remediation action for any incident '
+    description: Check the recommended remediation action for any incident
     name: armorblox-check-remediation-action
     outputs:
     - contextPath: Armorblox.Threat.remediation_actions
       description: Should be the remediation action name for the incident under inspection
       type: string
-  dockerimage: demisto/python3:3.9.7.24076
+  dockerimage: demisto/python3:3.9.8.24399
   isfetch: true
   runonce: false
   script: ''
