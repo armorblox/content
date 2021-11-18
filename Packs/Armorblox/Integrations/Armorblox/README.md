@@ -58,13 +58,15 @@ Check the recommended remediation action for any incident
 
 #### Context Example
 ```
-    {
-    "Armorblox": {
-        "Threat": {
-	"incident_id": "5375",
-	"remediation_actions": "NEEDS REVIEW"
-    }
-        }
+   {
+        "Armorblox": 
+            {
+                "Threat": 
+                    {
+                        "incident_id": "5375",
+                        "remediation_actions": "NEEDS REVIEW"
+                    }
+            }
     }
 ```
 
