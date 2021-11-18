@@ -2,9 +2,10 @@
     "associatedToAll": false,
     "associatedTypes": [
         "Armorblox",
-        "Armorblox  Outbound Threat",
         "Armorblox Inbound Threat",
-        "Armorblox Abuse MailBox Report"
+        "Armorblox Abuse MailBox Report",
+        "Armorblox Abuse Mailbox Report",
+        "Armorblox Outbound Threat"
     ],
     "caseInsensitive": true,
     "cliName": "armorbloxsubject",
