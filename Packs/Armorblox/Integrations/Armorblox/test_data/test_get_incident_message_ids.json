@@ -10,7 +10,7 @@
     "users": [
         {
             "user_name": "Admin",
-            "user_address": "admin@armorblox.dev",
+            "user_address": "demo@armorblox.dev",
             "is_vip": false,
             "department_name": "Engineering",
             "job_title": "Manager"
@@ -20,8 +20,8 @@
         {
             "event_id": "5474",
             "object_id": "e86960d7175eb03595abe3fbebed75664ed2035d443394c0180bb9d30251d1d0",
-            "from_name": "Mary Mitchell",
-            "from_address": "mary_mitchell9@patterson.com",
+            "from_name": "John Doe",
+            "from_address": "john_doe@patterson.com",
             "date": "2021-10-21T10:26:07Z",
             "event_action": {
                 "action": "ALERT"
@@ -32,7 +32,7 @@
                 "Admin"
             ],
             "to_address": [
-                "admin@armorblox.dev"
+                "demo@armorblox.dev"
             ],
             "affected_user": "Admin",
             "folder_category": "SPAM",
@@ -53,10 +53,10 @@
     "earliest_subject": "response required: from John",
     "app_name": "MICROSOFT_OUTLOOK",
     "senders": [
-        "mary_mitchell9@patterson.com"
+        "john_doe@patterson.com"
     ],
     "external_senders": [
-        "mary_mitchell9@patterson.com"
+        "john_doe@patterson.com"
     ],
     "status_counts": {
         "done_count": "0",
